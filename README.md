@@ -9,7 +9,7 @@ The MCQ Test Application provides RESTful endpoints to manage Multiple Choice Qu
 Programming language
 ### Spring Boot: 
 Framework for building and running Java applications
-### Maven: Dependency management
+### Gradle: Dependency management
 ### RESTful API: 
 Architectural style for networked applications
 ### PostGreSql Database:
@@ -21,7 +21,7 @@ To run the MCQ Test Application locally, follow these steps:
 
 Java Development Kit (JDK) installed (version 8 or higher)
 
-Maven installed
+Gradle installed
 
 Installation
 
