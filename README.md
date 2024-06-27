@@ -28,7 +28,7 @@ Installation
 ### Clone the repository:
 
 ### bash
-git clone https://github.com/your/repository.git
+git clone  https://github.com/vishalyadav-bnt/TestManagement_Application.git
 cd mcq-test-application
 Build the project:
 
