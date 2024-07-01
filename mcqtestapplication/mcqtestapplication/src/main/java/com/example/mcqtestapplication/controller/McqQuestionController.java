@@ -27,7 +27,7 @@ public class McqQuestionController {
     McqQuestionServiceimpl questionService;
     @PostMapping("/create")
     public ResponseEntity<SuccessResponse> createQuestion(@RequestBody McqQuestionModel question) {
-        log.info("Request recieved for creating...");
+        log.info("Request recieved for creating..."+question.getCategory());
         McqQuestionModel createdQuestion = questionService.creaQuestionModel(question);
         SuccessResponse response = new SuccessResponse("Question Store SuccesFully", HttpStatus.CREATED.value(),
                 createdQuestion);
