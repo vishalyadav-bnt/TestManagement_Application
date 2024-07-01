@@ -25,7 +25,7 @@ public class McqQuestionServiceimpl implements McqQuestionService {
     public McqQuestionModel creaQuestionModel(McqQuestionModel mcqQuestionModel) {
         log.info("comes in service");
         if (mcqQuestionModel == null || mcqQuestionModel.getQuestion() == null) {
-            log.error("Error Occured");
+            log.error("Error Occured......");
             throw new QuestionModelIsEmpty("Question model is empty");
         }
         McqQuestionModel stroeqQuestionModel = questionRepositiory.save(mcqQuestionModel);
