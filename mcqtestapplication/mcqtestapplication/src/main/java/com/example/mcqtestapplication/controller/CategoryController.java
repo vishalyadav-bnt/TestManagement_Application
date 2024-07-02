@@ -20,20 +20,16 @@ import com.example.mcqtestapplication.model.CategoryModel;
 import com.example.mcqtestapplication.response.SuccessResponse;
 import com.example.mcqtestapplication.service.CategoryServiceImpl;
 
-
-
 @RestController
 @RequestMapping("/api/category")
 public class CategoryController {
     @Autowired
     private CategoryServiceImpl categoryServiceImpl;
-    private static final  Logger log=LoggerFactory.getLogger(CategoryController.class);
+    private static final Logger log = LoggerFactory.getLogger(CategoryController.class);
 
     @PostMapping("/create")
     public ResponseEntity<SuccessResponse> createCategory(@RequestBody CategoryModel categoryModel) {
-        System.out.println("hello : "+ categoryModel);
-        log.info("Request recieved for creating Category..."+categoryModel.getCategoryDescription()+"\t"+categoryModel.getCategoryName());
-      
+        log.info("Request recieved for creating Category...");
         CategoryModel createdCategory = categoryServiceImpl.saveCategory(categoryModel);
         SuccessResponse response = new SuccessResponse("Category Store SuccesFully", HttpStatus.CREATED.value(),
                 createdCategory);
@@ -42,8 +38,8 @@ public class CategoryController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<SuccessResponse> getAllQuestions() {
-        log.info("Request for fetch all questions");
+    public ResponseEntity<SuccessResponse> getAllCategory() {
+        log.info("Request for fetch all category");
         List<CategoryModel> categoryModels = categoryServiceImpl.getAllCategory();
         SuccessResponse response = new SuccessResponse("Data Fetch Succesfully", HttpStatus.OK.value(), categoryModels);
         log.info("Fetch All questions");
@@ -51,29 +47,30 @@ public class CategoryController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<SuccessResponse> getQuestionById(@PathVariable("id") int id) {
-        log.info("Request for single question fetch");
+    public ResponseEntity<SuccessResponse> getCategoryById(@PathVariable("id") int id) {
+        log.info("Request for single category fetch");
         CategoryModel categoryModel = categoryServiceImpl.getCategoryById(id);
-        SuccessResponse response = new SuccessResponse("Data fetch by using id", HttpStatus.FOUND.value(), categoryModel);
+        SuccessResponse response = new SuccessResponse("Data fetch by using id", HttpStatus.FOUND.value(),
+                categoryModel);
         log.info("Question fetch succesfully");
         return new ResponseEntity<>(response, HttpStatus.FOUND);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<SuccessResponse> updateQuestion(@PathVariable("id") int id,
+    public ResponseEntity<SuccessResponse> updateCategory(@PathVariable("id") int id,
             @RequestBody CategoryModel categoryModel) {
-        log.info("Request for updating question");
+        log.info("Request for updating category");
         CategoryModel updatedCategoryModel = categoryServiceImpl.updateCategory(id, categoryModel);
-        SuccessResponse response=new SuccessResponse("Data Updated...",HttpStatus.OK.value(),updatedCategoryModel);
+        SuccessResponse response = new SuccessResponse("Data Updated...", HttpStatus.CREATED.value(), updatedCategoryModel);
         log.info("Update Data Succesfully");
-        return new ResponseEntity<>(response,HttpStatus.CREATED);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteQuestion(@PathVariable("id") int id) {
+    public ResponseEntity<String> deleteCategory(@PathVariable("id") int id) {
         log.info("Request for delete data");
         categoryServiceImpl.deleteCategory(id);
         return ResponseEntity.ok("Data Deleted....");
     }
-   
+
 }

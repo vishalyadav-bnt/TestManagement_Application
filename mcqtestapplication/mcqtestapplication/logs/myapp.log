@@ -1,463 +1,521 @@
-2024-07-01 17:32:40 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Starting McqtestapplicationApplicationTests using Java 21.0.3 with PID 376 (started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 17:32:40 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 17:32:42 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 17:32:42 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 157 ms. Found 3 JPA repository interfaces.
-2024-07-01 17:32:43 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 17:32:44 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 17:32:44 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 17:32:44 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 17:32:44 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 17:32:45 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@646cb2e
-2024-07-01 17:32:45 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 17:32:47 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 17:32:47 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 17:32:48 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 17:32:49 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Started McqtestapplicationApplicationTests in 9.991 seconds (process running for 12.03)
-2024-07-01 17:32:51 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for updating question
-2024-07-01 17:32:51 [Test worker] INFO  c.e.m.c.McqQuestionController - Update Data Succesfully
-2024-07-01 17:32:51 [Test worker] INFO  c.e.m.c.McqQuestionController - Request recieved for creating...null
-2024-07-01 17:32:51 [Test worker] INFO  c.e.m.c.McqQuestionController - Send Response Successfully
-2024-07-01 17:32:51 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for delete data
-2024-07-01 17:32:51 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for fetch all questions
-2024-07-01 17:32:51 [Test worker] INFO  c.e.m.c.McqQuestionController - Fetch All questions
-2024-07-01 17:32:51 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for single question fetch
-2024-07-01 17:32:51 [Test worker] INFO  c.e.m.c.McqQuestionController - Question fetch succesfully
-2024-07-01 17:32:52 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comes in service
-2024-07-01 17:32:52 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return from service
-2024-07-01 17:32:52 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - coming in service for get all questions
-2024-07-01 17:32:52 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return succesfully
-2024-07-01 17:32:52 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comimg in service for update data
-2024-07-01 17:32:52 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return updated data
-2024-07-01 17:32:52 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 17:32:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-07-01 17:32:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-07-01 17:33:25 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 13032 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 17:33:25 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 17:33:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 17:33:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
-2024-07-01 17:33:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 17:33:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 17:33:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 17:33:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 17:33:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1452 ms
-2024-07-01 17:33:27 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 17:33:27 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 17:33:27 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 17:33:27 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 17:33:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 17:33:27 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@78128dd0
-2024-07-01 17:33:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 17:33:28 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 17:33:28 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 17:33:29 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 17:33:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 17:33:29 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 5.255 seconds (process running for 5.787)
-2024-07-01 17:33:38 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 17:33:38 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 17:33:38 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2024-07-01 17:33:38 [http-nio-8080-exec-2] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...null	null
-2024-07-01 17:33:38 [http-nio-8080-exec-2] INFO  c.e.m.service.CategoryServiceImpl - comes in servicenull
-2024-07-01 17:33:38 [http-nio-8080-exec-2] ERROR c.e.m.service.CategoryServiceImpl - Error Occured In Saving
-2024-07-01 17:34:24 [http-nio-8080-exec-3] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...null	null
-2024-07-01 17:34:24 [http-nio-8080-exec-3] INFO  c.e.m.service.CategoryServiceImpl - comes in servicenull
-2024-07-01 17:34:24 [http-nio-8080-exec-3] ERROR c.e.m.service.CategoryServiceImpl - Error Occured In Saving
-2024-07-01 17:37:54 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 4560 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 17:37:54 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 17:37:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 17:37:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 124 ms. Found 3 JPA repository interfaces.
-2024-07-01 17:37:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 17:37:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 17:37:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 17:37:58 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 17:37:58 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3647 ms
-2024-07-01 17:37:58 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 17:37:58 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 17:37:58 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 17:37:59 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 17:37:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 17:38:00 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@13dc6649
-2024-07-01 17:38:00 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 17:38:02 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 17:38:02 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 17:38:02 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 17:38:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 17:38:03 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 10.068 seconds (process running for 11.1)
-2024-07-01 17:39:02 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 17:39:02 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 17:39:02 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2024-07-01 17:40:07 [http-nio-8080-exec-1] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...null	null
-2024-07-01 17:40:07 [http-nio-8080-exec-1] INFO  c.e.m.service.CategoryServiceImpl - comes in servicenull
-2024-07-01 17:40:07 [http-nio-8080-exec-1] ERROR c.e.m.service.CategoryServiceImpl - Error Occured In Saving
-2024-07-01 17:45:06 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 15648 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 17:45:06 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 17:45:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 17:45:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 3 JPA repository interfaces.
-2024-07-01 17:45:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 17:45:08 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 17:45:08 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 17:45:08 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 17:45:08 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2529 ms
-2024-07-01 17:45:09 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 17:45:09 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 17:45:09 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 17:45:10 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 17:45:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 17:45:10 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7e4ac598
-2024-07-01 17:45:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 17:45:12 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 17:45:12 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 17:45:13 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 17:45:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 17:45:13 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 8.266 seconds (process running for 9.274)
-2024-07-01 17:45:25 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 17:45:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 17:45:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2024-07-01 17:45:25 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
-2024-07-01 17:47:13 [http-nio-8080-exec-5] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...null	null
-2024-07-01 17:47:13 [http-nio-8080-exec-5] INFO  c.e.m.service.CategoryServiceImpl - comes in servicenull
-2024-07-01 17:47:13 [http-nio-8080-exec-5] ERROR c.e.m.service.CategoryServiceImpl - Error Occured In Saving
-2024-07-01 17:49:58 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 15416 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 17:49:58 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 17:49:59 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 17:49:59 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 140 ms. Found 3 JPA repository interfaces.
-2024-07-01 17:50:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 17:50:00 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 17:50:00 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 17:50:00 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 17:50:00 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2822 ms
-2024-07-01 17:50:01 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 17:50:01 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 17:50:01 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 17:50:02 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 17:50:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 17:50:02 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a6556b6
-2024-07-01 17:50:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 17:50:04 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 17:50:04 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 17:50:04 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 17:50:05 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 17:50:05 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 8.765 seconds (process running for 9.779)
-2024-07-01 17:50:14 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 17:50:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 17:50:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-07-01 17:50:16 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 576 ms
-2024-07-01 17:55:26 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 14136 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 17:55:26 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 17:55:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 17:55:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117 ms. Found 3 JPA repository interfaces.
-2024-07-01 17:55:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 17:55:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 17:55:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 17:55:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 17:55:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2647 ms
-2024-07-01 17:55:29 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 17:55:29 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 17:55:30 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 17:55:30 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 17:55:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 17:55:31 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2d4e99de
-2024-07-01 17:55:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 17:55:33 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 17:55:33 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 17:55:34 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 17:55:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 17:55:34 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 9.102 seconds (process running for 10.566)
-2024-07-01 17:55:44 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 17:55:44 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 17:55:44 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2024-07-01 17:58:59 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 6796 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 17:58:59 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 17:59:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 17:59:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 92 ms. Found 3 JPA repository interfaces.
-2024-07-01 17:59:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 17:59:01 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 17:59:01 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 17:59:01 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 17:59:01 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2413 ms
-2024-07-01 17:59:02 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 17:59:02 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 17:59:02 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 17:59:03 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 17:59:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 17:59:03 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@13dc6649
-2024-07-01 17:59:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 17:59:04 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 17:59:04 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 17:59:05 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 17:59:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 17:59:06 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 7.778 seconds (process running for 8.526)
-2024-07-01 17:59:20 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 17:59:20 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 17:59:20 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2024-07-01 18:00:48 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 11352 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 18:00:48 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 18:00:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 18:00:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107 ms. Found 3 JPA repository interfaces.
-2024-07-01 18:00:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 18:00:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 18:00:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 18:00:51 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 18:00:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2585 ms
-2024-07-01 18:00:51 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 18:00:51 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 18:00:51 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 18:00:52 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 18:00:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 18:00:52 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ffb0d10
-2024-07-01 18:00:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 18:00:54 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 18:00:54 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:00:54 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 18:00:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 18:00:55 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 8.204 seconds (process running for 8.981)
-2024-07-01 18:01:02 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 18:01:02 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 18:01:02 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2024-07-01 18:02:25 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Starting McqtestapplicationApplicationTests using Java 21.0.3 with PID 2044 (started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 18:02:25 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 18:02:26 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 18:02:26 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
-2024-07-01 18:02:27 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 18:02:27 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 18:02:27 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 18:02:28 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 18:02:28 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 18:02:28 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ec0ca83
-2024-07-01 18:02:28 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 18:02:29 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 18:02:29 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:02:30 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 18:02:31 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Started McqtestapplicationApplicationTests in 6.284 seconds (process running for 7.837)
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for updating question
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.c.McqQuestionController - Update Data Succesfully
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.c.McqQuestionController - Request recieved for creating...null
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.c.McqQuestionController - Send Response Successfully
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for delete data
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for fetch all questions
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.c.McqQuestionController - Fetch All questions
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for single question fetch
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.c.McqQuestionController - Question fetch succesfully
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comes in service
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return from service
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - coming in service for get all questions
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return succesfully
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comimg in service for update data
-2024-07-01 18:02:32 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return updated data
-2024-07-01 18:02:32 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:02:32 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-07-01 18:02:32 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-07-01 18:02:54 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 10008 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 18:02:54 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 18:02:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 18:02:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 3 JPA repository interfaces.
-2024-07-01 18:02:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 18:02:56 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 18:02:56 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 18:02:57 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 18:02:57 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2442 ms
-2024-07-01 18:02:57 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 18:02:57 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 18:02:57 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 18:02:57 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 18:02:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 18:02:58 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c573229
-2024-07-01 18:02:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 18:02:59 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 18:02:59 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:03:00 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 18:03:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 18:03:01 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 7.276 seconds (process running for 7.958)
-2024-07-01 18:03:07 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 18:03:07 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 18:03:07 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2024-07-01 18:03:51 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 5556 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 18:03:51 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 18:03:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 18:03:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 3 JPA repository interfaces.
-2024-07-01 18:03:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 18:03:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 18:03:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 18:03:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 18:03:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2401 ms
-2024-07-01 18:03:54 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 18:03:54 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 18:03:54 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 18:03:55 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 18:03:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 18:03:55 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30afb481
-2024-07-01 18:03:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 18:03:57 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 18:03:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:03:57 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 18:03:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 18:03:58 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 8.116 seconds (process running for 8.775)
-2024-07-01 18:04:02 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 18:04:02 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 18:04:02 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-07-01 18:04:39 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Starting McqtestapplicationApplicationTests using Java 21.0.3 with PID 11312 (started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 18:04:39 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 18:04:40 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 18:04:40 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
-2024-07-01 18:04:41 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 18:04:41 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 18:04:41 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 18:04:41 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 18:04:42 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 18:04:42 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ec0ca83
-2024-07-01 18:04:42 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 18:04:43 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 18:04:43 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:04:44 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 18:04:45 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Started McqtestapplicationApplicationTests in 6.258 seconds (process running for 7.788)
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for updating question
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.c.McqQuestionController - Update Data Succesfully
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.c.McqQuestionController - Request recieved for creating...null
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.c.McqQuestionController - Send Response Successfully
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for delete data
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for fetch all questions
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.c.McqQuestionController - Fetch All questions
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for single question fetch
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.c.McqQuestionController - Question fetch succesfully
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comes in service
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return from service
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - coming in service for get all questions
-2024-07-01 18:04:46 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return succesfully
-2024-07-01 18:04:47 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comimg in service for update data
-2024-07-01 18:04:47 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return updated data
-2024-07-01 18:04:47 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:04:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-07-01 18:04:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-07-01 18:04:56 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 10444 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 18:04:56 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 18:04:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 18:04:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 3 JPA repository interfaces.
-2024-07-01 18:04:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 18:04:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 18:04:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 18:04:58 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 18:04:58 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2101 ms
-2024-07-01 18:04:58 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 18:04:58 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 18:04:59 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 18:04:59 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 18:04:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 18:04:59 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@77ecdc2b
-2024-07-01 18:04:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 18:05:01 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 18:05:01 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:05:01 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 18:05:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 18:05:02 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 6.9 seconds (process running for 7.435)
-2024-07-01 18:05:09 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 18:05:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 18:05:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2024-07-01 18:12:08 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 6948 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 18:12:08 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 18:12:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 18:12:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 193 ms. Found 3 JPA repository interfaces.
-2024-07-01 18:12:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 18:12:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 18:12:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 18:12:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 18:12:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4164 ms
-2024-07-01 18:12:14 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 18:12:14 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 18:12:14 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 18:12:14 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 18:12:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 18:12:15 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@48368a08
-2024-07-01 18:12:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 18:12:17 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 18:12:17 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:12:18 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 18:12:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 18:12:19 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 12.02 seconds (process running for 12.974)
-2024-07-01 18:12:47 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 18:12:47 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 18:12:47 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2024-07-01 18:12:47 [http-nio-8080-exec-1] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...null	null
-2024-07-01 18:12:47 [http-nio-8080-exec-1] INFO  c.e.m.service.CategoryServiceImpl - comes in servicenull
-2024-07-01 18:12:47 [http-nio-8080-exec-1] ERROR c.e.m.service.CategoryServiceImpl - Error Occured In Saving
-2024-07-01 18:15:21 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 4504 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 18:15:21 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 18:15:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 18:15:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110 ms. Found 3 JPA repository interfaces.
-2024-07-01 18:15:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 18:15:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 18:15:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 18:15:25 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 18:15:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3421 ms
-2024-07-01 18:15:26 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 18:15:26 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 18:15:26 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 18:15:26 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 18:15:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 18:15:27 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30afb481
-2024-07-01 18:15:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 18:15:29 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 18:15:29 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:15:30 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 18:15:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 18:15:31 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 11.156 seconds (process running for 12.019)
-2024-07-01 18:15:39 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 18:15:39 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 18:15:40 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-07-01 18:15:40 [http-nio-8080-exec-2] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...null	null
-2024-07-01 18:15:40 [http-nio-8080-exec-2] INFO  c.e.m.service.CategoryServiceImpl - comes in servicenull
-2024-07-01 18:15:40 [http-nio-8080-exec-2] ERROR c.e.m.service.CategoryServiceImpl - Error Occured In Saving
-2024-07-01 18:16:07 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 1420 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 18:16:07 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 18:16:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 18:16:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 91 ms. Found 3 JPA repository interfaces.
-2024-07-01 18:16:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 18:16:10 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 18:16:10 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 18:16:10 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 18:16:10 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2678 ms
-2024-07-01 18:16:10 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 18:16:10 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 18:16:10 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 18:16:11 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 18:16:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 18:16:11 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@48368a08
-2024-07-01 18:16:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 18:16:13 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 18:16:13 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:16:14 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 18:16:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 18:16:15 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 8.497 seconds (process running for 9.416)
-2024-07-01 18:16:24 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 18:16:24 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 18:16:24 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-07-01 18:16:24 [http-nio-8080-exec-2] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...null	null
-2024-07-01 18:16:24 [http-nio-8080-exec-2] INFO  c.e.m.service.CategoryServiceImpl - comes in servicenull
-2024-07-01 18:16:24 [http-nio-8080-exec-2] ERROR c.e.m.service.CategoryServiceImpl - Error Occured In Saving
-2024-07-01 18:17:06 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 7328 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
-2024-07-01 18:17:06 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
-2024-07-01 18:17:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-01 18:17:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 3 JPA repository interfaces.
-2024-07-01 18:17:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-07-01 18:17:09 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-07-01 18:17:09 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-07-01 18:17:09 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-07-01 18:17:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2544 ms
-2024-07-01 18:17:09 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-01 18:17:09 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-01 18:17:09 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-07-01 18:17:10 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-01 18:17:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-07-01 18:17:10 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30afb481
-2024-07-01 18:17:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-01 18:17:12 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-01 18:17:12 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-01 18:17:13 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-01 18:17:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-07-01 18:17:14 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 9.554 seconds (process running for 10.846)
-2024-07-01 18:17:36 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-01 18:17:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-01 18:17:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2024-07-01 18:18:25 [http-nio-8080-exec-4] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...Some Description	Some Name
-2024-07-01 18:18:25 [http-nio-8080-exec-4] INFO  c.e.m.service.CategoryServiceImpl - comes in serviceSome Description
-2024-07-01 18:18:25 [http-nio-8080-exec-4] INFO  c.e.m.service.CategoryServiceImpl - return from service
-2024-07-01 18:18:25 [http-nio-8080-exec-4] INFO  c.e.m.controller.CategoryController - Send Response Successfully
-2024-07-01 18:37:07 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s41ms356µs200ns).
+2024-07-02 11:37:51 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 13976 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 11:37:51 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 11:37:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 11:37:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 3 JPA repository interfaces.
+2024-07-02 11:37:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-02 11:37:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-02 11:37:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-02 11:37:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-02 11:37:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2493 ms
+2024-07-02 11:37:54 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 11:37:54 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 11:37:54 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 11:37:55 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 11:37:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 11:37:55 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@65e620b0
+2024-07-02 11:37:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 11:37:56 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 11:37:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 11:37:57 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 11:37:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-02 11:37:58 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 7.562 seconds (process running for 8.121)
+2024-07-02 11:38:05 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-02 11:38:05 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-02 11:38:05 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-07-02 11:38:06 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 417 ms
+2024-07-02 11:38:52 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 2968 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 11:38:52 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 11:38:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 11:38:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
+2024-07-02 11:38:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-02 11:38:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-02 11:38:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-02 11:38:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-02 11:38:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1992 ms
+2024-07-02 11:38:55 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 11:38:55 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 11:38:55 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 11:38:55 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 11:38:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 11:38:56 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@144a5e6e
+2024-07-02 11:38:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 11:38:57 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 11:38:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 11:38:58 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 11:38:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-02 11:38:58 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 6.818 seconds (process running for 7.376)
+2024-07-02 11:39:04 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-02 11:39:04 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-02 11:39:04 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-07-02 11:39:05 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 480 ms
+2024-07-02 11:39:38 [http-nio-8080-exec-5] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...Core Java	JAVA
+2024-07-02 11:39:38 [http-nio-8080-exec-5] INFO  c.e.m.service.CategoryServiceImpl - comes in serviceCore Java
+2024-07-02 11:39:38 [http-nio-8080-exec-5] INFO  c.e.m.service.CategoryServiceImpl - return from service
+2024-07-02 11:39:38 [http-nio-8080-exec-5] INFO  c.e.m.controller.CategoryController - Send Response Successfully
+2024-07-02 11:39:52 [http-nio-8080-exec-6] INFO  c.e.m.controller.CategoryController - Request for single question fetch
+2024-07-02 11:39:52 [http-nio-8080-exec-6] INFO  c.e.m.service.CategoryServiceImpl - comes in service for fetch single questions
+2024-07-02 11:39:52 [http-nio-8080-exec-6] ERROR c.e.m.service.CategoryServiceImpl - error occured
+2024-07-02 11:40:11 [http-nio-8080-exec-8] INFO  c.e.m.controller.CategoryController - Request for single question fetch
+2024-07-02 11:40:11 [http-nio-8080-exec-8] INFO  c.e.m.service.CategoryServiceImpl - comes in service for fetch single questions
+2024-07-02 11:40:11 [http-nio-8080-exec-8] INFO  c.e.m.service.CategoryServiceImpl - return from service with single questions model
+2024-07-02 11:40:11 [http-nio-8080-exec-8] INFO  c.e.m.controller.CategoryController - Question fetch succesfully
+2024-07-02 11:40:42 [http-nio-8080-exec-9] INFO  c.e.m.controller.CategoryController - Request for delete data
+2024-07-02 11:40:42 [http-nio-8080-exec-9] INFO  c.e.m.service.CategoryServiceImpl - comes in service for delete data
+2024-07-02 11:40:42 [http-nio-8080-exec-9] INFO  c.e.m.service.CategoryServiceImpl - Delete data....
+2024-07-02 11:40:49 [http-nio-8080-exec-10] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...Core Java	JAVA
+2024-07-02 11:40:49 [http-nio-8080-exec-10] INFO  c.e.m.service.CategoryServiceImpl - comes in serviceCore Java
+2024-07-02 11:40:49 [http-nio-8080-exec-10] INFO  c.e.m.service.CategoryServiceImpl - return from service
+2024-07-02 11:40:49 [http-nio-8080-exec-10] INFO  c.e.m.controller.CategoryController - Send Response Successfully
+2024-07-02 11:41:47 [http-nio-8080-exec-1] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save data
+2024-07-02 11:41:47 [http-nio-8080-exec-1] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-02 11:41:47 [http-nio-8080-exec-1] INFO  c.e.m.service.SubCategoryServiceImpl - Data Save And Return Response
+2024-07-02 11:45:08 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 8664 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 11:45:08 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 11:45:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 11:45:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 3 JPA repository interfaces.
+2024-07-02 11:45:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-02 11:45:10 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-02 11:45:10 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-02 11:45:10 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-02 11:45:10 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2115 ms
+2024-07-02 11:45:10 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 11:45:10 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 11:45:10 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 11:45:11 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 11:45:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 11:45:11 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c573229
+2024-07-02 11:45:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 11:45:12 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 11:45:12 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 11:45:13 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 11:45:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-02 11:45:14 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 7.326 seconds (process running for 7.99)
+2024-07-02 11:45:20 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-02 11:45:20 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-02 11:45:20 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-07-02 11:45:21 [http-nio-8080-exec-5] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 778 ms
+2024-07-02 11:45:33 [http-nio-8080-exec-6] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save data
+2024-07-02 11:45:33 [http-nio-8080-exec-6] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-02 11:45:34 [http-nio-8080-exec-6] INFO  c.e.m.service.SubCategoryServiceImpl - Data Save And Return Response
+2024-07-02 11:49:21 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 10476 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 11:49:21 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 11:49:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 11:49:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2024-07-02 11:49:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-02 11:49:23 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-02 11:49:23 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-02 11:49:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-02 11:49:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2618 ms
+2024-07-02 11:49:24 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 11:49:24 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 11:49:24 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 11:49:24 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 11:49:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 11:49:25 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@696174d3
+2024-07-02 11:49:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 11:49:26 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 11:49:26 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 11:49:27 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 11:49:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-02 11:49:28 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 7.866 seconds (process running for 8.407)
+2024-07-02 11:49:32 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-02 11:49:32 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-02 11:49:32 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-07-02 11:49:33 [http-nio-8080-exec-5] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 373 ms
+2024-07-02 11:50:15 [http-nio-8080-exec-8] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save data
+2024-07-02 11:50:15 [http-nio-8080-exec-8] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-02 11:50:16 [http-nio-8080-exec-8] INFO  c.e.m.service.SubCategoryServiceImpl - Data Save And Return Response
+2024-07-02 11:53:50 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 12112 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 11:53:50 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 11:53:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 11:53:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
+2024-07-02 11:53:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-02 11:53:52 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-02 11:53:52 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-02 11:53:52 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-02 11:53:52 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2253 ms
+2024-07-02 11:53:53 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 11:53:53 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 11:53:53 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 11:53:53 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 11:53:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 11:53:54 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c573229
+2024-07-02 11:53:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 11:53:55 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 11:53:55 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 11:53:56 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 11:53:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-02 11:53:56 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 7.007 seconds (process running for 7.721)
+2024-07-02 11:54:03 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-02 11:54:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-02 11:54:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-07-02 11:54:04 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 451 ms
+2024-07-02 11:54:12 [http-nio-8080-exec-5] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save data
+2024-07-02 11:54:12 [http-nio-8080-exec-5] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-02 11:54:12 [http-nio-8080-exec-5] INFO  c.e.m.service.SubCategoryServiceImpl - Data Save And Return Response
+2024-07-02 11:55:31 [http-nio-8080-exec-8] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save data
+2024-07-02 11:55:31 [http-nio-8080-exec-8] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-02 11:55:31 [http-nio-8080-exec-8] INFO  c.e.m.service.SubCategoryServiceImpl - Data Save And Return Response
+2024-07-02 11:56:26 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 13492 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 11:56:26 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 11:56:27 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 11:56:27 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
+2024-07-02 11:56:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-02 11:56:28 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-02 11:56:28 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-02 11:56:28 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-02 11:56:28 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2242 ms
+2024-07-02 11:56:29 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 11:56:29 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 11:56:29 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 11:56:29 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 11:56:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 11:56:30 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30afb481
+2024-07-02 11:56:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 11:56:31 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 11:56:31 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 11:56:32 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 11:56:33 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-02 11:56:33 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 7.825 seconds (process running for 8.406)
+2024-07-02 11:56:37 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-02 11:56:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-02 11:56:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-07-02 11:56:38 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 441 ms
+2024-07-02 11:56:46 [http-nio-8080-exec-5] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save data
+2024-07-02 11:56:46 [http-nio-8080-exec-5] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-02 11:56:46 [http-nio-8080-exec-5] INFO  c.e.m.service.SubCategoryServiceImpl - Data Save And Return Response
+2024-07-02 11:58:18 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 9124 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 11:58:18 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 11:58:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 11:58:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
+2024-07-02 11:58:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-02 11:58:20 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-02 11:58:20 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-02 11:58:21 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-02 11:58:21 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2176 ms
+2024-07-02 11:58:21 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 11:58:21 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 11:58:21 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 11:58:21 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 11:58:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 11:58:22 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@77ecdc2b
+2024-07-02 11:58:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 11:58:23 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 11:58:23 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 11:58:24 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 11:58:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-02 11:58:24 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 6.913 seconds (process running for 7.478)
+2024-07-02 11:59:03 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-02 11:59:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-02 11:59:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-07-02 11:59:03 [http-nio-8080-exec-1] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save data
+2024-07-02 11:59:03 [http-nio-8080-exec-1] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-02 11:59:04 [http-nio-8080-exec-1] INFO  c.e.m.service.SubCategoryServiceImpl - Data Save And Return Response
+2024-07-02 12:00:04 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 12460 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 12:00:04 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 12:00:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 12:00:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
+2024-07-02 12:00:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-02 12:00:06 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-02 12:00:06 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-02 12:00:06 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-02 12:00:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2084 ms
+2024-07-02 12:00:07 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 12:00:07 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 12:00:07 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 12:00:07 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 12:00:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 12:00:08 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@520a95ff
+2024-07-02 12:00:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 12:00:09 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 12:00:09 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 12:00:10 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 12:00:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-02 12:00:11 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 6.985 seconds (process running for 7.596)
+2024-07-02 12:00:18 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-02 12:00:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-02 12:00:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-07-02 12:00:19 [http-nio-8080-exec-5] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 404 ms
+2024-07-02 12:00:24 [http-nio-8080-exec-2] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save data
+2024-07-02 12:00:24 [http-nio-8080-exec-2] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-02 12:00:24 [http-nio-8080-exec-2] INFO  c.e.m.service.SubCategoryServiceImpl - Data Save And Return Response
+2024-07-02 12:03:18 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 1320 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 12:03:18 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 12:03:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 12:03:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 3 JPA repository interfaces.
+2024-07-02 12:03:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-02 12:03:20 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-02 12:03:20 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-02 12:03:20 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-02 12:03:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2252 ms
+2024-07-02 12:03:20 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 12:03:21 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 12:03:21 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 12:03:21 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 12:03:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 12:03:21 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30afb481
+2024-07-02 12:03:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 12:03:23 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 12:03:23 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 12:03:23 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 12:03:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-02 12:03:24 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 7.059 seconds (process running for 7.691)
+2024-07-02 12:03:37 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-02 12:03:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-02 12:03:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-07-02 12:03:38 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 555 ms
+2024-07-02 12:03:47 [http-nio-8080-exec-5] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save data
+2024-07-02 12:03:47 [http-nio-8080-exec-5] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-02 12:03:47 [http-nio-8080-exec-5] INFO  c.e.m.service.SubCategoryServiceImpl - Data Save And Return Response
+2024-07-02 12:06:12 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Starting McqtestapplicationApplicationTests using Java 21.0.3 with PID 924 (started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 12:06:12 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 12:06:13 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 12:06:14 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 132 ms. Found 3 JPA repository interfaces.
+2024-07-02 12:06:14 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 12:06:15 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 12:06:15 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 12:06:15 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 12:06:15 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 12:06:15 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@67c0c90b
+2024-07-02 12:06:15 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 12:06:17 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 12:06:17 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 12:06:18 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 12:06:19 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Started McqtestapplicationApplicationTests in 7.063 seconds (process running for 8.739)
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for updating question
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.c.McqQuestionController - Update Data Succesfully
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.c.McqQuestionController - Request recieved for creating...null
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.c.McqQuestionController - Send Response Successfully
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for delete data
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for fetch all questions
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.c.McqQuestionController - Fetch All questions
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for single question fetch
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.c.McqQuestionController - Question fetch succesfully
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comes in service
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return from service
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - coming in service for get all questions
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return succesfully
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comimg in service for update data
+2024-07-02 12:06:20 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return updated data
+2024-07-02 12:06:20 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 12:06:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-07-02 12:06:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-07-02 12:08:04 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Starting McqtestapplicationApplicationTests using Java 21.0.3 with PID 8608 (started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 12:08:04 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 12:08:05 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 12:08:05 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
+2024-07-02 12:08:06 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 12:08:06 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 12:08:06 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 12:08:06 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 12:08:06 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 12:08:07 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7827d7b
+2024-07-02 12:08:07 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 12:08:08 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 12:08:08 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 12:08:09 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 12:08:10 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Started McqtestapplicationApplicationTests in 6.135 seconds (process running for 7.826)
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for updating question
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.c.McqQuestionController - Update Data Succesfully
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.c.McqQuestionController - Request recieved for creating...null
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.c.McqQuestionController - Send Response Successfully
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for delete data
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for fetch all questions
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.c.McqQuestionController - Fetch All questions
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for single question fetch
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.c.McqQuestionController - Question fetch succesfully
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comes in service
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return from service
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - coming in service for get all questions
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return succesfully
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comimg in service for update data
+2024-07-02 12:08:11 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return updated data
+2024-07-02 12:08:11 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 12:08:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-07-02 12:08:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-07-02 12:08:24 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 12912 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 12:08:24 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 12:08:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 12:08:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81 ms. Found 3 JPA repository interfaces.
+2024-07-02 12:08:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-02 12:08:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-02 12:08:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-02 12:08:27 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-02 12:08:27 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2286 ms
+2024-07-02 12:08:27 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 12:08:27 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 12:08:27 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 12:08:28 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 12:08:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 12:08:28 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30afb481
+2024-07-02 12:08:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 12:08:29 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 12:08:29 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 12:08:30 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 12:08:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-02 12:08:31 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 7.31 seconds (process running for 8.14)
+2024-07-02 12:08:38 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-02 12:08:38 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-02 12:08:38 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-07-02 12:08:39 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 466 ms
+2024-07-02 12:20:21 [http-nio-8080-exec-7] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save datastring
+2024-07-02 12:20:21 [http-nio-8080-exec-7] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-02 12:20:21 [http-nio-8080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: detached entity passed to persist: com.example.mcqtestapplication.model.CategoryModel] with root cause
+org.hibernate.PersistentObjectException: detached entity passed to persist: com.example.mcqtestapplication.model.CategoryModel
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:88)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:799)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:747)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:290)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:280)
+	at org.hibernate.engine.internal.Cascade.cascadeToOne(Cascade.java:517)
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:439)
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:224)
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:157)
+	at org.hibernate.event.internal.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:487)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:303)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:757)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:741)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy2/jdk.proxy2.$Proxy118.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
+	at jdk.proxy2/jdk.proxy2.$Proxy118.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:629)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy125.save(Unknown Source)
+	at com.example.mcqtestapplication.service.SubCategoryServiceImpl.saveSubcategoryModel(SubCategoryServiceImpl.java:31)
+	at com.example.mcqtestapplication.controller.SubCategoryController.saveSubcategoryModel(SubCategoryController.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-07-02 12:21:33 [main] INFO  c.e.m.McqtestapplicationApplication - Starting McqtestapplicationApplication using Java 21.0.3 with PID 9368 (D:\TestManagement_Application\mcqtestapplication\mcqtestapplication\build\classes\java\main started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-02 12:21:33 [main] INFO  c.e.m.McqtestapplicationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-07-02 12:21:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-02 12:21:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
+2024-07-02 12:21:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-02 12:21:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-02 12:21:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-02 12:21:36 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-02 12:21:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2260 ms
+2024-07-02 12:21:36 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-02 12:21:36 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-02 12:21:36 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-02 12:21:36 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-02 12:21:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-02 12:21:37 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@520a95ff
+2024-07-02 12:21:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-02 12:21:38 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-02 12:21:38 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-02 12:21:39 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-02 12:21:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-02 12:21:39 [main] INFO  c.e.m.McqtestapplicationApplication - Started McqtestapplicationApplication in 6.806 seconds (process running for 7.544)
+2024-07-02 12:21:44 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-02 12:21:44 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-02 12:21:44 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-07-02 12:21:45 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 512 ms
+2024-07-02 12:22:16 [http-nio-8080-exec-5] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...
+2024-07-02 12:22:16 [http-nio-8080-exec-5] INFO  c.e.m.service.CategoryServiceImpl - comes in serviceSpring boot Framework
+2024-07-02 12:22:16 [http-nio-8080-exec-5] INFO  c.e.m.service.CategoryServiceImpl - return from service
+2024-07-02 12:22:16 [http-nio-8080-exec-5] INFO  c.e.m.controller.CategoryController - Send Response Successfully
+2024-07-02 12:23:17 [http-nio-8080-exec-8] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save dataAnnotation in spring
+2024-07-02 12:23:17 [http-nio-8080-exec-8] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-02 12:23:17 [http-nio-8080-exec-8] INFO  c.e.m.service.SubCategoryServiceImpl - Data Save And Return Response
+2024-07-02 12:23:57 [http-nio-8080-exec-10] INFO  c.e.m.c.SubCategoryController - Request for single Subcategory fetch
+2024-07-02 12:23:57 [http-nio-8080-exec-10] INFO  c.e.m.service.SubCategoryServiceImpl -  Request comes in service for fetch single category
+2024-07-02 12:23:57 [http-nio-8080-exec-10] INFO  c.e.m.service.SubCategoryServiceImpl - return from service with single category model
+2024-07-02 12:23:57 [http-nio-8080-exec-10] INFO  c.e.m.c.SubCategoryController - Question fetch succesfully
+2024-07-02 12:25:26 [http-nio-8080-exec-2] INFO  c.e.m.c.SubCategoryController - Request for updating Subcategory
+2024-07-02 12:25:26 [http-nio-8080-exec-2] INFO  c.e.m.service.SubCategoryServiceImpl - Request comimg in service for update data
+2024-07-02 12:25:26 [http-nio-8080-exec-2] INFO  c.e.m.service.SubCategoryServiceImpl - return updated data
+2024-07-02 12:25:26 [http-nio-8080-exec-2] INFO  c.e.m.c.SubCategoryController - Update Data Succesfully
+2024-07-02 12:25:39 [http-nio-8080-exec-3] INFO  c.e.m.c.SubCategoryController - Request for delete data
+2024-07-02 12:25:39 [http-nio-8080-exec-3] INFO  c.e.m.service.SubCategoryServiceImpl -  Request comes in service for delete data
+2024-07-02 12:25:39 [http-nio-8080-exec-3] INFO  c.e.m.service.SubCategoryServiceImpl - Delete data....
+2024-07-02 12:25:48 [http-nio-8080-exec-4] INFO  c.e.m.c.SubCategoryController - Request for single Subcategory fetch
+2024-07-02 12:25:48 [http-nio-8080-exec-4] INFO  c.e.m.service.SubCategoryServiceImpl -  Request comes in service for fetch single category
+2024-07-02 12:25:48 [http-nio-8080-exec-4] ERROR c.e.m.service.SubCategoryServiceImpl - error occured in getall
+2024-07-02 12:26:01 [http-nio-8080-exec-5] INFO  c.e.m.c.SubCategoryController - Request for fetch all Subcategory
+2024-07-02 12:26:01 [http-nio-8080-exec-5] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in service for get all subcategory
+2024-07-02 12:26:01 [http-nio-8080-exec-5] INFO  c.e.m.service.SubCategoryServiceImpl - Error occured in getAll
