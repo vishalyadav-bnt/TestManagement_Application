@@ -23,7 +23,7 @@ public class SubCategoryTest {
     @Mock
     SubCategoryRepositiory subCategoryRepositiory;
 
-    @InjectMocks 
+    @InjectMocks
     SubCategoryServiceImpl serviceImpl;
 
     @BeforeEach
@@ -32,93 +32,86 @@ public class SubCategoryTest {
     }
 
     @Test
-    public void saveSubCategorySuccess()
-    {
-      int subCategoryId=1;
-      int categoryId=1;
-     String categoryName="java";
-     String categoryDescription="Collection";
-     String subcategoryName="annotation";
-     String subCategoryDescription="Annotation in spring";
-     CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-     SubCategoryModel subcategoryModel=new SubCategoryModel();
-     subcategoryModel.setSubCategoryId(subCategoryId);
-     subcategoryModel.setCategoryModel(categoryModel);
-     subcategoryModel.setSubCategoryName(subcategoryName);
-     subcategoryModel.setSubCategoryDescription(subCategoryDescription);
-     when(subCategoryRepositiory.save(subcategoryModel)).thenReturn(subcategoryModel);
-     SubCategoryModel newSubCategoryModel=serviceImpl.saveSubcategoryModel(subcategoryModel);
-     assertEquals(subcategoryModel,newSubCategoryModel);
-     
+    public void saveSubCategorySuccess() {
+        int subCategoryId = 1;
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        String subcategoryName = "annotation";
+        String subCategoryDescription = "Annotation in spring";
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        SubCategoryModel subcategoryModel = new SubCategoryModel();
+        subcategoryModel.setSubCategoryId(subCategoryId);
+        subcategoryModel.setCategoryModel(categoryModel);
+        subcategoryModel.setSubCategoryName(subcategoryName);
+        subcategoryModel.setSubCategoryDescription(subCategoryDescription);
+        when(subCategoryRepositiory.save(subcategoryModel)).thenReturn(subcategoryModel);
+        SubCategoryModel newSubCategoryModel = serviceImpl.saveSubcategoryModel(subcategoryModel);
+        assertEquals(subcategoryModel, newSubCategoryModel);
+
     }
 
     @Test
-    public void getAllSubCategorySuccess()
-    {
-    int subCategoryId=1;
-      int categoryId=1;
-     String categoryName="java";
-     String categoryDescription="Collection";
-     String subcategoryName="annotation";
-     String subCategoryDescription="Annotation in spring";
-     CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-     SubCategoryModel subcategoryModel=new SubCategoryModel();
-     subcategoryModel.setSubCategoryId(subCategoryId);
-     subcategoryModel.setCategoryModel(categoryModel);
-     subcategoryModel.setSubCategoryName(subcategoryName);
-     subcategoryModel.setSubCategoryDescription(subCategoryDescription);
-     List<SubCategoryModel>list=new ArrayList<>();
-     list.add(subcategoryModel);
-     when(subCategoryRepositiory.findAll()).thenReturn(list);
-     List<SubCategoryModel> newSubCategoryModel=serviceImpl.getAllSubCategory();
-     assertNotNull(newSubCategoryModel);
-     assertFalse(newSubCategoryModel.isEmpty());
-     
+    public void getAllSubCategorySuccess() {
+        int subCategoryId = 1;
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        String subcategoryName = "annotation";
+        String subCategoryDescription = "Annotation in spring";
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        SubCategoryModel subcategoryModel = new SubCategoryModel();
+        subcategoryModel.setSubCategoryId(subCategoryId);
+        subcategoryModel.setCategoryModel(categoryModel);
+        subcategoryModel.setSubCategoryName(subcategoryName);
+        subcategoryModel.setSubCategoryDescription(subCategoryDescription);
+        List<SubCategoryModel> list = new ArrayList<>();
+        list.add(subcategoryModel);
+        when(subCategoryRepositiory.findAll()).thenReturn(list);
+        List<SubCategoryModel> newSubCategoryModel = serviceImpl.getAllSubCategory();
+        assertNotNull(newSubCategoryModel);
+        assertFalse(newSubCategoryModel.isEmpty());
+
     }
 
-     @Test
-    public void updateCategorySuccess()
-    {
-        int subCategoryId=1;
-        int categoryId=1;
-         String categoryName="java";
-         String categoryDescription="Collection";
-         String subcategoryName="annotation";
-         String subCategoryDescription="Annotation in spring";
-         CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-         SubCategoryModel subcategoryModel=new SubCategoryModel();
-         subcategoryModel.setSubCategoryId(subCategoryId);
-         subcategoryModel.setCategoryModel(categoryModel);
-         subcategoryModel.setSubCategoryName(subcategoryName);
-         subcategoryModel.setSubCategoryDescription(subCategoryDescription);
-     when(subCategoryRepositiory.findById(subCategoryId)).thenReturn(Optional.of(subcategoryModel));
-     when(subCategoryRepositiory.save(subcategoryModel)).thenReturn(subcategoryModel);
-     SubCategoryModel newSubCategoryModel=serviceImpl.updateSubCategory(subCategoryId, subcategoryModel);
-     assertEquals(subcategoryModel,newSubCategoryModel);
-    }
-  
     @Test
-    public void deleteSubCategorySuccess()
-    {
-        int subCategoryId=1;
-        int categoryId=1;
-         String categoryName="java";
-         String categoryDescription="Collection";
-         String subcategoryName="annotation";
-         String subCategoryDescription="Annotation in spring";
-         CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-         SubCategoryModel subcategoryModel=new SubCategoryModel();
-         subcategoryModel.setSubCategoryId(subCategoryId);
-         subcategoryModel.setCategoryModel(categoryModel);
-         subcategoryModel.setSubCategoryName(subcategoryName);
-         subcategoryModel.setSubCategoryDescription(subCategoryDescription);
-     when(subCategoryRepositiory.findById(subCategoryId)).thenReturn(Optional.of(subcategoryModel));
-     subCategoryRepositiory.delete(subcategoryModel);
-     serviceImpl.deleteSubCategory(subCategoryId);
-     assertEquals(subcategoryModel,subcategoryModel);
+    public void updateCategorySuccess() {
+        int subCategoryId = 1;
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        String subcategoryName = "annotation";
+        String subCategoryDescription = "Annotation in spring";
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        SubCategoryModel subcategoryModel = new SubCategoryModel();
+        subcategoryModel.setSubCategoryId(subCategoryId);
+        subcategoryModel.setCategoryModel(categoryModel);
+        subcategoryModel.setSubCategoryName(subcategoryName);
+        subcategoryModel.setSubCategoryDescription(subCategoryDescription);
+        when(subCategoryRepositiory.findById(subCategoryId)).thenReturn(Optional.of(subcategoryModel));
+        when(subCategoryRepositiory.save(subcategoryModel)).thenReturn(subcategoryModel);
+        SubCategoryModel newSubCategoryModel = serviceImpl.updateSubCategory(subCategoryId, subcategoryModel);
+        assertEquals(subcategoryModel, newSubCategoryModel);
     }
 
-
-    
+    @Test
+    public void deleteSubCategorySuccess() {
+        int subCategoryId = 1;
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        String subcategoryName = "annotation";
+        String subCategoryDescription = "Annotation in spring";
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        SubCategoryModel subcategoryModel = new SubCategoryModel();
+        subcategoryModel.setSubCategoryId(subCategoryId);
+        subcategoryModel.setCategoryModel(categoryModel);
+        subcategoryModel.setSubCategoryName(subcategoryName);
+        subcategoryModel.setSubCategoryDescription(subCategoryDescription);
+        when(subCategoryRepositiory.findById(subCategoryId)).thenReturn(Optional.of(subcategoryModel));
+        subCategoryRepositiory.delete(subcategoryModel);
+        serviceImpl.deleteSubCategory(subCategoryId);
+        assertEquals(subcategoryModel, subcategoryModel);
+    }
 
 }

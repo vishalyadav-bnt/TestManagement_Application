@@ -19,7 +19,6 @@ import org.mockito.MockitoAnnotations;
 import com.example.mcqtestapplication.model.McqQuestionModel;
 import com.example.mcqtestapplication.repositiory.QuestionRepositiory;
 
-
 public class McqQuestionserviceTest {
     @Mock
     QuestionRepositiory questionRepositiory;
@@ -33,8 +32,7 @@ public class McqQuestionserviceTest {
     }
 
     @Test
-    public void testCreateQuestion()
-    {
+    public void testCreateQuestion() {
         McqQuestionModel mockQuestion = new McqQuestionModel();
         mockQuestion.setQuestion("What is Spring Boot?");
         mockQuestion.setOptionOne("A Java framework");
@@ -45,12 +43,12 @@ public class McqQuestionserviceTest {
         mockQuestion.setPositiveMark(3);
         mockQuestion.setNagativeMark(-1);
         when(questionRepositiory.save(mockQuestion)).thenReturn(mockQuestion);
-        McqQuestionModel mcqQuestionModel=mcqQuestionServiceimpl.creaQuestionModel(mockQuestion);
+        McqQuestionModel mcqQuestionModel = mcqQuestionServiceimpl.creaQuestionModel(mockQuestion);
         assertEquals(mockQuestion, mcqQuestionModel);
     }
+
     @Test
-    public void readQuestion()
-    {
+    public void readQuestion() {
         McqQuestionModel mockQuestion = new McqQuestionModel();
         mockQuestion.setQuestion("What is Spring Boot?");
         mockQuestion.setOptionOne("A Java framework");
@@ -64,18 +62,17 @@ public class McqQuestionserviceTest {
         list.add(mockQuestion);
         when(questionRepositiory.findAll()).thenReturn(list);
 
-        List<McqQuestionModel> allquestion =mcqQuestionServiceimpl.getAllQuestions();
+        List<McqQuestionModel> allquestion = mcqQuestionServiceimpl.getAllQuestions();
 
         assertNotNull(allquestion);
         assertFalse(allquestion.isEmpty());
         assertEquals(1, allquestion.size());
-       
+
     }
 
     @Test
-    public void deleteQuestion()
-    {
-        int id=2;
+    public void deleteQuestion() {
+        int id = 2;
         McqQuestionModel mockQuestion = new McqQuestionModel();
         mockQuestion.setQuestion("What is Spring Boot?");
         mockQuestion.setOptionOne("A Java framework");
@@ -86,14 +83,13 @@ public class McqQuestionserviceTest {
         mockQuestion.setPositiveMark(3);
         mockQuestion.setNagativeMark(-1);
         when(questionRepositiory.findById(id)).thenReturn(Optional.of(mockQuestion));
-       
-        assertEquals(mockQuestion,mockQuestion);
+
+        assertEquals(mockQuestion, mockQuestion);
     }
 
     @Test
-    public void testUpdate()
-    {
-        int id=2;
+    public void testUpdate() {
+        int id = 2;
         McqQuestionModel mockQuestion = new McqQuestionModel();
         mockQuestion.setQuestion("What is Spring Boot?");
         mockQuestion.setOptionOne("A Java framework");
@@ -105,11 +101,8 @@ public class McqQuestionserviceTest {
         mockQuestion.setNagativeMark(-1);
         when(questionRepositiory.findById(id)).thenReturn(Optional.of(mockQuestion));
         when(questionRepositiory.save(any(McqQuestionModel.class))).thenReturn(mockQuestion);
-        McqQuestionModel mcqQuestionModel=mcqQuestionServiceimpl.updateQuestion(id,mockQuestion);
+        McqQuestionModel mcqQuestionModel = mcqQuestionServiceimpl.updateQuestion(id, mockQuestion);
         assertEquals(mockQuestion, mcqQuestionModel);
     }
-
-
-
 
 }

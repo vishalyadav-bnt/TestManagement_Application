@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
+
 import com.example.mcqtestapplication.model.McqQuestionModel;
 import com.example.mcqtestapplication.response.SuccessResponse;
 import com.example.mcqtestapplication.service.McqQuestionServiceimpl;
@@ -22,12 +25,13 @@ import com.example.mcqtestapplication.service.McqQuestionServiceimpl;
 @RestController
 @RequestMapping("/api/questions")
 public class McqQuestionController {
-    private static final  Logger log=LoggerFactory.getLogger(McqQuestionController.class);
+    private static final Logger log = LoggerFactory.getLogger(McqQuestionController.class);
     @Autowired
     McqQuestionServiceimpl questionService;
+
     @PostMapping("/create")
     public ResponseEntity<SuccessResponse> createQuestion(@RequestBody McqQuestionModel question) {
-        log.info("Request recieved for creating..."+question.getCategory());
+        log.info("Request recieved for creating...");
         McqQuestionModel createdQuestion = questionService.creaQuestionModel(question);
         SuccessResponse response = new SuccessResponse("Question Store SuccesFully", HttpStatus.CREATED.value(),
                 createdQuestion);
@@ -58,9 +62,9 @@ public class McqQuestionController {
             @RequestBody McqQuestionModel question) {
         log.info("Request for updating question");
         McqQuestionModel updatedQuestion = questionService.updateQuestion(id, question);
-        SuccessResponse response=new SuccessResponse("Data Updated...",HttpStatus.OK.value(),updatedQuestion);
+        SuccessResponse response = new SuccessResponse("Data Updated...", HttpStatus.OK.value(), updatedQuestion);
         log.info("Update Data Succesfully");
-        return new ResponseEntity<>(response,HttpStatus.CREATED);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
@@ -68,5 +72,13 @@ public class McqQuestionController {
         log.info("Request for delete data");
         questionService.deleteQuestion(id);
         return ResponseEntity.ok("Data Deleted....");
+    }
+
+    @PostMapping("/bulkquestion")
+    public ResponseEntity<SuccessResponse> saveBulkQuestion(@RequestParam("file") MultipartFile multipartFile)
+    {
+        List<McqQuestionModel>list=questionService.saveBulkQuestion(multipartFile);
+        SuccessResponse successResponse=new SuccessResponse("Data Fetch Successfully",HttpStatus.CREATED.value(),list);
+        return new ResponseEntity<>(successResponse,HttpStatus.CREATED);
     }
 }

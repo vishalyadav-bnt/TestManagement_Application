@@ -1,6 +1,5 @@
 package com.example.mcqtestapplication.controller;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -49,7 +48,7 @@ public class McqQuestionControllerTest {
         ResponseEntity<SuccessResponse> responseEntity = questionController.createQuestion(inputQuestion);
 
         assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
-    
+
     }
 
     @Test
@@ -115,7 +114,7 @@ public class McqQuestionControllerTest {
         ResponseEntity<SuccessResponse> responseEntity = questionController.updateQuestion(questionId, mockQuestion);
 
         assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
-    
+
     }
 
     @Test

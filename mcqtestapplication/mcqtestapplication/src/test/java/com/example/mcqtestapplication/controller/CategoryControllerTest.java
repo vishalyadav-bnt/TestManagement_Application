@@ -22,68 +22,64 @@ public class CategoryControllerTest {
     CategoryServiceImpl categoryServiceImpl;
     @InjectMocks
     CategoryController categoryController;
+
     @BeforeEach
     public void setup() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void saveCategorySuccess()
-    {
-     int categoryId=1;
-     String categoryName="java";
-     String categoryDescription="Collection";
-     CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-     when(categoryServiceImpl.saveCategory(categoryModel)).thenReturn(categoryModel);
-     ResponseEntity<SuccessResponse> responseEntity=categoryController.createCategory(categoryModel);
-     assertEquals(HttpStatus.CREATED,responseEntity.getStatusCode());
-    }
-    @Test
-    public void getAllCategorySuccess()
-    {
-     int categoryId=1;
-     String categoryName="java";
-     String categoryDescription="Collection";
-     CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-     List<CategoryModel>list=new ArrayList<>();
-     list.add(categoryModel);
-     when(categoryServiceImpl.getAllCategory()).thenReturn(list);
-     ResponseEntity<SuccessResponse> responseEntity=categoryController.getAllCategory();
-     assertEquals(HttpStatus.OK,responseEntity.getStatusCode());
+    public void saveCategorySuccess() {
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        when(categoryServiceImpl.saveCategory(categoryModel)).thenReturn(categoryModel);
+        ResponseEntity<SuccessResponse> responseEntity = categoryController.createCategory(categoryModel);
+        assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
     }
 
     @Test
-    public void getSingleCategorySuccess()
-    {
-     int categoryId=1;
-     String categoryName="java";
-     String categoryDescription="Collection";
-     CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-     when(categoryServiceImpl.getCategoryById(categoryId)).thenReturn(categoryModel);
-     ResponseEntity<SuccessResponse> responseEntity=categoryController.getCategoryById(categoryId);
-     assertEquals(HttpStatus.FOUND,responseEntity.getStatusCode());
+    public void getAllCategorySuccess() {
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        List<CategoryModel> list = new ArrayList<>();
+        list.add(categoryModel);
+        when(categoryServiceImpl.getAllCategory()).thenReturn(list);
+        ResponseEntity<SuccessResponse> responseEntity = categoryController.getAllCategory();
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
     }
 
     @Test
-    public void updateCategorySuccess()
-    {
-     int categoryId=1;
-     String categoryName="java";
-     String categoryDescription="Collection";
-     CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-     when(categoryServiceImpl.updateCategory(categoryId,categoryModel)).thenReturn(categoryModel);
-     ResponseEntity<SuccessResponse> responseEntity=categoryController.updateCategory(categoryId,categoryModel);
-     assertEquals(HttpStatus.CREATED,responseEntity.getStatusCode());
+    public void getSingleCategorySuccess() {
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        when(categoryServiceImpl.getCategoryById(categoryId)).thenReturn(categoryModel);
+        ResponseEntity<SuccessResponse> responseEntity = categoryController.getCategoryById(categoryId);
+        assertEquals(HttpStatus.FOUND, responseEntity.getStatusCode());
     }
 
+    @Test
+    public void updateCategorySuccess() {
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        when(categoryServiceImpl.updateCategory(categoryId, categoryModel)).thenReturn(categoryModel);
+        ResponseEntity<SuccessResponse> responseEntity = categoryController.updateCategory(categoryId, categoryModel);
+        assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
+    }
 
     @Test
-    public void deleteCategorySuccess()
-    {
-     int categoryId=1;
-     categoryServiceImpl.deleteCategory(categoryId);
-     ResponseEntity<String> responseEntity=categoryController.deleteCategory(categoryId);
-     assertEquals("Data Deleted....",responseEntity.getBody());
+    public void deleteCategorySuccess() {
+        int categoryId = 1;
+        categoryServiceImpl.deleteCategory(categoryId);
+        ResponseEntity<String> responseEntity = categoryController.deleteCategory(categoryId);
+        assertEquals("Data Deleted....", responseEntity.getBody());
     }
 
 }

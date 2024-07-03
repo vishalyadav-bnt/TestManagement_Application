@@ -1,25 +1,36 @@
 package com.example.mcqtestapplication.service;
 
+import java.io.*;
 import java.util.List;
 import java.util.Optional;
+import java.util.ArrayList;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.springframework.web.multipart.MultipartFile;
 import com.example.mcqtestapplication.exception.DataIsNotPresent;
 import com.example.mcqtestapplication.exception.IdNotFound;
 import com.example.mcqtestapplication.exception.QuestionModelIsEmpty;
 import com.example.mcqtestapplication.model.McqQuestionModel;
+import com.example.mcqtestapplication.model.SubCategoryModel;
 import com.example.mcqtestapplication.repositiory.QuestionRepositiory;
+import com.example.mcqtestapplication.repositiory.SubCategoryRepositiory;
 
 @Service
 public class McqQuestionServiceimpl implements McqQuestionService {
-    private static final Logger log=LoggerFactory.getLogger(McqQuestionServiceimpl.class);
-    
+    private static final Logger log = LoggerFactory.getLogger(McqQuestionServiceimpl.class);
+
     @Autowired
     QuestionRepositiory questionRepositiory;
+
+    @Autowired
+    SubCategoryRepositiory subCategoryRepositiory;
 
     @Override
     public McqQuestionModel creaQuestionModel(McqQuestionModel mcqQuestionModel) {
@@ -77,7 +88,7 @@ public class McqQuestionServiceimpl implements McqQuestionService {
         Optional<McqQuestionModel> question = questionRepositiory.findById(id);
         if (question.isPresent()) {
             McqQuestionModel questions = question.get();
-            questions.setCategory(mcqQuestionModel.getCategory());
+            questions.setSubCategory(mcqQuestionModel.getSubCategory());
             questions.setQuestion(mcqQuestionModel.getQuestion());
             questions.setOptionOne(mcqQuestionModel.getOptionOne());
             questions.setOptionTwo(mcqQuestionModel.getOptionTwo());
@@ -93,5 +104,71 @@ public class McqQuestionServiceimpl implements McqQuestionService {
             log.error("Error occured");
             throw new IdNotFound("Id Is Not Present");
         }
+    }
+
+    @Override
+    public List<McqQuestionModel> saveBulkQuestion(MultipartFile multipartFile) {
+        List<McqQuestionModel> questionBank = new ArrayList<>();
+        try (InputStream inputStream = multipartFile.getInputStream(); // USe Try With Resource
+                Workbook workbook = new XSSFWorkbook(inputStream)) {
+            org.apache.poi.ss.usermodel.Sheet sheet = workbook.getSheetAt(0);
+            for (int i = sheet.getFirstRowNum() + 1; i <= sheet.getLastRowNum(); i++) {
+                Row row = sheet.getRow(i);
+                if (row != null) {
+                    McqQuestionModel multipleChoiceQuestion = new McqQuestionModel();
+                    for (int j = (row.getFirstCellNum()); j < row.getLastCellNum(); j++) {
+                        Cell cell = row.getCell(j);
+                        switch (j) {
+                            case 2:
+                                String subCategoryName = cell.toString();
+                                Optional<SubCategoryModel> subCategory = subCategoryRepositiory
+                                        .findBySubCategoryName(subCategoryName);
+                                if (!subCategory.isPresent()) {
+                                    throw new DataIsNotPresent("Subcategory is not present");
+                                }
+                                SubCategoryModel setSubCategory = subCategory.get();
+                                multipleChoiceQuestion.setSubCategory(setSubCategory);
+                                break;
+                            case 3:
+                                multipleChoiceQuestion.setQuestion(cell.toString());
+                                break;
+                            case 4:
+                                multipleChoiceQuestion.setOptionOne(cell.toString());
+                                break;
+                            case 5:
+                                multipleChoiceQuestion.setOptionTwo(cell.toString());
+                                break;
+                            case 6:
+                                multipleChoiceQuestion.setOptionThree(cell.toString());
+                                break;
+                            case 7:
+                                multipleChoiceQuestion.setOptionFour(cell.toString());
+                                break;
+                            case 8:
+                                multipleChoiceQuestion.setCorrectOption(cell.toString());
+                                break;
+                            case 9:
+                                int positiveMark = (int) Double.parseDouble(cell.toString().trim());
+                                multipleChoiceQuestion.setPositiveMark(positiveMark);
+                                break;
+                            case 10:
+                                int nagativeMark = (int) Double.parseDouble(cell.toString().trim());
+                                multipleChoiceQuestion.setNagativeMark(nagativeMark);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    McqQuestionModel savedQuestion = questionRepositiory.save(multipleChoiceQuestion);
+                    questionBank.add(savedQuestion);
+                } else {
+                    log.info("Value of row is Null at index: " + i);
+                    throw new DataIsNotPresent("SubCategory is null");
+                }
+            }
+        } catch (IOException e) {
+            log.error("Error reading file or closing resources", e);
+        }
+        return questionBank;
     }
 }

@@ -30,57 +30,54 @@ public class CategoryServiceTest {
     public void setup() {
         MockitoAnnotations.openMocks(this);
     }
-    
+
     @Test
-    public void saveCategorySuccess()
-    {
-     int categoryId=1;
-     String categoryName="java";
-     String categoryDescription="Collection";
-     CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-     when(categoryRepositiory.save(categoryModel)).thenReturn(categoryModel);
-     CategoryModel newCategoryModel=categoryServiceImpl.saveCategory(categoryModel);
-     assertEquals(categoryModel, newCategoryModel);
-    }
-    @Test
-    public void getAllCategorySuccess()
-    {
-     int categoryId=1;
-     String categoryName="java";
-     String categoryDescription="Collection";
-     List<CategoryModel>list=new ArrayList<>();
-     CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-     list.add(categoryModel);
-     when(categoryRepositiory.findAll()).thenReturn(list);
-     List<CategoryModel> newCategoryModel=categoryServiceImpl.getAllCategory();
-     assertNotNull(newCategoryModel);
-     assertFalse(newCategoryModel.isEmpty());
-     assertEquals(1, newCategoryModel.size());
+    public void saveCategorySuccess() {
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        when(categoryRepositiory.save(categoryModel)).thenReturn(categoryModel);
+        CategoryModel newCategoryModel = categoryServiceImpl.saveCategory(categoryModel);
+        assertEquals(categoryModel, newCategoryModel);
     }
 
     @Test
-    public void deleteCategorySuccess()
-    {
-     int categoryId=1;
-     String categoryName="java";
-     String categoryDescription="Collection";
-     CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-     when(categoryRepositiory.findById(categoryId)).thenReturn(Optional.of(categoryModel));
-     when(categoryRepositiory.save(categoryModel)).thenReturn(categoryModel);
-     categoryServiceImpl.deleteCategory(categoryId);
-     assertEquals(categoryModel,categoryModel);
+    public void getAllCategorySuccess() {
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        List<CategoryModel> list = new ArrayList<>();
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        list.add(categoryModel);
+        when(categoryRepositiory.findAll()).thenReturn(list);
+        List<CategoryModel> newCategoryModel = categoryServiceImpl.getAllCategory();
+        assertNotNull(newCategoryModel);
+        assertFalse(newCategoryModel.isEmpty());
+        assertEquals(1, newCategoryModel.size());
     }
 
     @Test
-    public void updateCategorySuccess()
-    {
-     int categoryId=1;
-     String categoryName="java";
-     String categoryDescription="Collection";
-     CategoryModel categoryModel=new CategoryModel(categoryId,categoryName,categoryDescription);
-     when(categoryRepositiory.findById(categoryId)).thenReturn(Optional.of(categoryModel));
-     when(categoryRepositiory.save(categoryModel)).thenReturn(categoryModel);
-     CategoryModel newCategoryModel=categoryServiceImpl.updateCategory(categoryId,categoryModel);
-     assertEquals(categoryModel, newCategoryModel);
+    public void deleteCategorySuccess() {
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        when(categoryRepositiory.findById(categoryId)).thenReturn(Optional.of(categoryModel));
+        when(categoryRepositiory.save(categoryModel)).thenReturn(categoryModel);
+        categoryServiceImpl.deleteCategory(categoryId);
+        assertEquals(categoryModel, categoryModel);
+    }
+
+    @Test
+    public void updateCategorySuccess() {
+        int categoryId = 1;
+        String categoryName = "java";
+        String categoryDescription = "Collection";
+        CategoryModel categoryModel = new CategoryModel(categoryId, categoryName, categoryDescription);
+        when(categoryRepositiory.findById(categoryId)).thenReturn(Optional.of(categoryModel));
+        when(categoryRepositiory.save(categoryModel)).thenReturn(categoryModel);
+        CategoryModel newCategoryModel = categoryServiceImpl.updateCategory(categoryId, categoryModel);
+        assertEquals(categoryModel, newCategoryModel);
     }
 }

@@ -28,6 +28,20 @@ public class GlobalExceptionHandler {
         return new  ResponseEntity<>(response,HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(ObjectIsNull.class)
+    public ResponseEntity<ErrorResponse> HandleObjectIsEmpty(ObjectIsNull e)
+    {
+        ErrorResponse response=new ErrorResponse(e.getMessage(),HttpStatus.NOT_FOUND.value());
+        return new  ResponseEntity<>(response,HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(DataAllreadyPresent.class)
+    public ResponseEntity<ErrorResponse> DataAllreadyPresentHandle(DataAllreadyPresent e)
+    {
+        ErrorResponse response=new ErrorResponse(e.getMessage(),HttpStatus.FOUND.value());
+        return new  ResponseEntity<>(response,HttpStatus.NOT_FOUND);
+    }
+
 
 
 }

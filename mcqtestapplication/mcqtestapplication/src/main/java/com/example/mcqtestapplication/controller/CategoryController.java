@@ -61,7 +61,8 @@ public class CategoryController {
             @RequestBody CategoryModel categoryModel) {
         log.info("Request for updating category");
         CategoryModel updatedCategoryModel = categoryServiceImpl.updateCategory(id, categoryModel);
-        SuccessResponse response = new SuccessResponse("Data Updated...", HttpStatus.CREATED.value(), updatedCategoryModel);
+        SuccessResponse response = new SuccessResponse("Data Updated...", HttpStatus.CREATED.value(),
+                updatedCategoryModel);
         log.info("Update Data Succesfully");
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
@@ -72,5 +73,7 @@ public class CategoryController {
         categoryServiceImpl.deleteCategory(id);
         return ResponseEntity.ok("Data Deleted....");
     }
+     
+   
 
 }
