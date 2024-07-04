@@ -1,5 +1,5 @@
 package com.example.mcqtestapplication.controller;
-
+import java.io.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -15,6 +15,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mock.web.MockMultipartFile;
 
 public class McqQuestionControllerTest {
 
@@ -124,5 +125,16 @@ public class McqQuestionControllerTest {
 
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
         assertEquals("Data Deleted....", responseEntity.getBody());
+    }
+
+
+    @Test
+    public void testSaveBulkQuestion() throws Exception {
+        InputStream inputStream = new FileInputStream("C:\\Users\\vishal.yadav\\Downloads\\QuestionBank.xlsx");
+        MockMultipartFile file = new MockMultipartFile("file", "QuestionBank.xlsx", "text/xlsx", inputStream);
+        List<McqQuestionModel>list=new ArrayList<>();
+        when(questionService.saveBulkQuestion(file)).thenReturn(list);
+        ResponseEntity<SuccessResponse> newList=questionController.saveBulkQuestion(file);
+        assertEquals(HttpStatus.CREATED, newList.getStatusCode());
     }
 }
