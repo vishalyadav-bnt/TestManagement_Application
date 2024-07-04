@@ -76,16 +76,4 @@ Copy code
   "statusCode": 200,
   "data": {} 
 }
-## Example
-To create a new MCQ question, send a POST request to /api/questions/create with a JSON body containing the question details:
 
-json
-Copy code
-{
-  "questionText": "What is the capital of France?",
-  "options": ["Paris", "Berlin", "London", "Madrid"],
-  "correctAnswer": "Paris"
-}
-Notes
-This application uses an postgresql in-memory database for development purposes. Data will be lost on application restart.
-Replace {id} in endpoints with the actual ID of the MCQ question.
