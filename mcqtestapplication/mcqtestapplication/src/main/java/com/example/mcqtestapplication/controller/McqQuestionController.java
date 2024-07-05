@@ -29,21 +29,21 @@ public class McqQuestionController {
     @Autowired
     McqQuestionServiceimpl questionService;
 
-    @PostMapping("/create")
+    @PostMapping()
     public ResponseEntity<SuccessResponse> createQuestion(@RequestBody McqQuestionModel question) {
         log.info("Request recieved for creating...");
         McqQuestionModel createdQuestion = questionService.creaQuestionModel(question);
-        SuccessResponse response = new SuccessResponse("Question Store SuccesFully", HttpStatus.CREATED.value(),
+        SuccessResponse response = new SuccessResponse("Question Store successfully", HttpStatus.CREATED.value(),
                 createdQuestion);
-        log.info("Send Response Successfully");
+        log.info("Send Response successfully");
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    @GetMapping("/all")
+    @GetMapping()
     public ResponseEntity<SuccessResponse> getAllQuestions() {
         log.info("Request for fetch all questions");
         List<McqQuestionModel> questions = questionService.getAllQuestions();
-        SuccessResponse response = new SuccessResponse("Data Fetch Succesfully", HttpStatus.OK.value(), questions);
+        SuccessResponse response = new SuccessResponse("Data Fetch successfully", HttpStatus.OK.value(), questions);
         log.info("Fetch All questions");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -53,7 +53,7 @@ public class McqQuestionController {
         log.info("Request for single question fetch");
         McqQuestionModel question = questionService.getQuestionById(id);
         SuccessResponse response = new SuccessResponse("Data fetch by using id", HttpStatus.FOUND.value(), question);
-        log.info("Question fetch succesfully");
+        log.info("Question fetch successfully");
         return new ResponseEntity<>(response, HttpStatus.FOUND);
     }
 
@@ -63,7 +63,7 @@ public class McqQuestionController {
         log.info("Request for updating question");
         McqQuestionModel updatedQuestion = questionService.updateQuestion(id, question);
         SuccessResponse response = new SuccessResponse("Data Updated...", HttpStatus.OK.value(), updatedQuestion);
-        log.info("Update Data Succesfully");
+        log.info("Update Data successfully");
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
@@ -75,10 +75,10 @@ public class McqQuestionController {
     }
 
     @PostMapping("/bulkquestion")
-    public ResponseEntity<SuccessResponse> saveBulkQuestion(@RequestParam("file") MultipartFile multipartFile)
-    {
-        List<McqQuestionModel>list=questionService.saveBulkQuestion(multipartFile);
-        SuccessResponse successResponse=new SuccessResponse("Data Fetch Successfully",HttpStatus.CREATED.value(),list);
-        return new ResponseEntity<>(successResponse,HttpStatus.CREATED);
+    public ResponseEntity<SuccessResponse> saveBulkQuestion(@RequestParam("file") MultipartFile multipartFile) {
+        List<McqQuestionModel> list = questionService.saveBulkQuestion(multipartFile);
+        SuccessResponse successResponse = new SuccessResponse("Data Fetch successfully", HttpStatus.CREATED.value(),
+                list);
+        return new ResponseEntity<>(successResponse, HttpStatus.CREATED);
     }
 }

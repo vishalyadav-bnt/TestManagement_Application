@@ -23,35 +23,33 @@ import lombok.NoArgsConstructor;
 @Table(name = "mcq_question")
 public class McqQuestionModel {
     @Id
-    @GeneratedValue(strategy =GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int question_id;
     @NotBlank(message = "Question cannot be blank")
     private String question;
-    
+
     @NotBlank(message = "Option One cannot be blank")
     private String optionOne;
-    
+
     @NotBlank(message = "Option Two cannot be blank")
     private String optionTwo;
-    
+
     @NotBlank(message = "Option Three cannot be blank")
     private String optionThree;
-    
+
     @NotBlank(message = "Option Four cannot be blank")
     private String optionFour;
-    
+
     @NotBlank(message = "Correct Option cannot be blank")
     private String correctOption;
-    
+
     @NotNull(message = "Positive Mark is required")
     private int positiveMark;
-    
+
     @NotNull(message = "Negative Mark is required")
     private int nagativeMark;
     @ManyToOne
-	@JoinColumn(name="sub_category_id")
-	@OnDelete(action = OnDeleteAction.CASCADE)
-	SubCategoryModel subCategory;
+    @JoinColumn(name = "sub_category_id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    SubCategoryModel subCategory;
 }
-    
-

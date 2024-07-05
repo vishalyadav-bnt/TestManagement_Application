@@ -24,7 +24,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public List<CategoryModel> getAllCategory() {
-        log.info("coming in service for get all questions");
+        log.info("\"Request received in service for get all category");
         List<CategoryModel> list = categoryRepositiory.findAll();
         if (list.isEmpty()) {
             log.info("throw excption");
@@ -36,7 +36,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public CategoryModel getCategoryById(int id) {
-        log.info("comes in service for fetch single questions");
+        log.info("Request received in service for fetch single questions");
         Optional<CategoryModel> category = categoryRepositiory.findById(id);
         if (!category.isPresent()) {
             log.error("error occured");
@@ -49,37 +49,35 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void deleteCategory(int id) {
-        log.info("comes in service for delete data");
+        log.info("Request received in service for delete data");
         Optional<CategoryModel> categoryOptional = categoryRepositiory.findById(id);
-        if (categoryOptional.isPresent()) {
-            categoryRepositiory.deleteById(id);
-            log.info("Delete data....");
-        } else {
+        if (categoryOptional.isEmpty()) {
             log.error("throw Exception");
             throw new IdNotFound("Id Not Found");
         }
+        categoryRepositiory.deleteById(id);
+        log.info("Delete data....");
     }
 
     @Override
     public CategoryModel updateCategory(int id, CategoryModel categoryModel) {
-        log.info("comimg in service for update data");
+        log.info("Request received in service for update data");
         Optional<CategoryModel> category = categoryRepositiory.findById(id);
-        if (category.isPresent()) {
-            CategoryModel categorys = category.get();
-            categorys.setCategoryName(categoryModel.getCategoryName());
-            categorys.setCategoryDescription(categoryModel.getCategoryDescription());
-            CategoryModel updatedData = categoryRepositiory.save(categorys);
-            log.info("return updated data");
-            return updatedData;
-        } else {
+        if (category.isEmpty()) {
             log.error("Error occured");
             throw new IdNotFound("Id Is Not Present");
         }
+        CategoryModel categorys = category.get();
+        categorys.setCategoryName(categoryModel.getCategoryName());
+        categorys.setCategoryDescription(categoryModel.getCategoryDescription());
+        CategoryModel updatedData = categoryRepositiory.save(categorys);
+        log.info("return updated data");
+        return updatedData;
     }
 
     @Override
     public CategoryModel saveCategory(CategoryModel categoryModel) {
-        log.info("comes in service" + categoryModel.getCategoryDescription());
+        log.info("Request received in service for save category data");
         if (categoryModel == null || categoryModel.getCategoryDescription() == null|| categoryModel.getCategoryName()==null||categoryModel.getCategoryName().isEmpty()) {
             log.error("Error Occured In Saving");
             throw new ObjectIsNull("Category model is empty");
@@ -87,7 +85,7 @@ public class CategoryServiceImpl implements CategoryService {
         Optional<CategoryModel> checkCategoryName=categoryRepositiory.findByCategoryName(categoryModel.getCategoryName());
         if(checkCategoryName.isPresent())
         {
-           throw new DataAllreadyPresent("Category name is exist");
+           throw new DataAllreadyPresent("Category name is allready present");
         }
         CategoryModel storeCategroyModel = categoryRepositiory.save(categoryModel);
         log.info("return from service");

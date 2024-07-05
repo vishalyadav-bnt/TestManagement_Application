@@ -23,17 +23,17 @@ public class SubCategoryServiceImpl implements SubCategoryservice {
 
   @Override
   public SubCategoryModel saveSubcategoryModel(SubCategoryModel subCategoryModel) {
-    log.info("Request coming in sarvices for save subcategoryModel");
+    log.info("Request received in service for save subcategoryModel");
     if (subCategoryModel == null || subCategoryModel.getSubCategoryName() == null
         || subCategoryModel.getSubCategoryName().isEmpty()) {
       log.error("Error Occured In Save");
       throw new ObjectIsNull("SubCategory Model IS Empty");
     }
-    Optional<SubCategoryModel> checkCategoryName=subCategoryRepositiory.findBySubCategoryName(subCategoryModel.getSubCategoryName());
-        if(checkCategoryName.isPresent())
-        {
-           throw new DataAllreadyPresent("SubCategory name is exist");
-        }
+    Optional<SubCategoryModel> checkCategoryName = subCategoryRepositiory
+        .findBySubCategoryName(subCategoryModel.getSubCategoryName());
+    if (checkCategoryName.isPresent()) {
+      throw new DataAllreadyPresent("SubCategory name is allready present");
+    }
     SubCategoryModel newSubCategoryModel = subCategoryRepositiory.save(subCategoryModel);
     log.info("Data Save And Return Response");
     return newSubCategoryModel;
@@ -41,7 +41,7 @@ public class SubCategoryServiceImpl implements SubCategoryservice {
 
   @Override
   public List<SubCategoryModel> getAllSubCategory() {
-    log.info("Request coming in service for get all subcategory");
+    log.info("Request received in service for get all subcategory");
     List<SubCategoryModel> list = subCategoryRepositiory.findAll();
     if (list.isEmpty()) {
       log.info("Error occured in getAll");
@@ -53,7 +53,7 @@ public class SubCategoryServiceImpl implements SubCategoryservice {
 
   @Override
   public SubCategoryModel getSubCategoryById(int id) {
-    log.info(" Request comes in service for fetch single category");
+    log.info(" Request received in service for fetch single subcategory");
     Optional<SubCategoryModel> subcategory = subCategoryRepositiory.findById(id);
     if (!subcategory.isPresent()) {
       log.error("error occured in getall");
@@ -66,32 +66,29 @@ public class SubCategoryServiceImpl implements SubCategoryservice {
 
   @Override
   public void deleteSubCategory(int id) {
-    log.info(" Request comes in service for delete data");
+    log.info("Request received in service for delete data");
     Optional<SubCategoryModel> categoryOptional = subCategoryRepositiory.findById(id);
-    if (categoryOptional.isPresent()) {
-      subCategoryRepositiory.deleteById(id);
-      log.info("Delete data....");
-    } else {
+    if (!categoryOptional.isPresent()) {
       log.error("Error occured in delete ");
       throw new IdNotFound("Id Not Found");
     }
+    subCategoryRepositiory.deleteById(id);
+    log.info("Delete data....");
   }
 
   @Override
   public SubCategoryModel updateSubCategory(int id, SubCategoryModel subCategoryModel) {
-    log.info("Request comimg in service for update data");
+    log.info("Request received in service for update data");
     Optional<SubCategoryModel> subcategory = subCategoryRepositiory.findById(id);
-    if (subcategory.isPresent()) {
-      SubCategoryModel updatesubModel = subcategory.get();
-      updatesubModel.setSubCategoryName(subCategoryModel.getSubCategoryName());
-      updatesubModel.setSubCategoryDescription(subCategoryModel.getSubCategoryDescription());
-      SubCategoryModel updatedData = subCategoryRepositiory.save(updatesubModel);
-      log.info("return updated data");
-      return updatedData;
-    } else {
+    if (!subcategory.isPresent()) {
       log.error("Error occured in update");
       throw new IdNotFound("Id Is Not Present");
     }
+    SubCategoryModel updatesubModel = subcategory.get();
+    updatesubModel.setSubCategoryName(subCategoryModel.getSubCategoryName());
+    updatesubModel.setSubCategoryDescription(subCategoryModel.getSubCategoryDescription());
+    SubCategoryModel updatedData = subCategoryRepositiory.save(updatesubModel);
+    log.info("return updated data");
+    return updatedData;
   }
-
 }

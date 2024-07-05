@@ -34,7 +34,7 @@ public class McqQuestionServiceimpl implements McqQuestionService {
 
     @Override
     public McqQuestionModel creaQuestionModel(McqQuestionModel mcqQuestionModel) {
-        log.info("comes in service");
+        log.info("Request received in service for save question data");
         if (mcqQuestionModel == null || mcqQuestionModel.getQuestion() == null) {
             log.error("Error Occured......");
             throw new QuestionModelIsEmpty("Question model is empty");
@@ -46,7 +46,7 @@ public class McqQuestionServiceimpl implements McqQuestionService {
 
     @Override
     public List<McqQuestionModel> getAllQuestions() {
-        log.info("coming in service for get all questions");
+        log.info("Request received in service for get all questions");
         List<McqQuestionModel> list = questionRepositiory.findAll();
         if (list.isEmpty()) {
             log.info("throw excption");
@@ -58,7 +58,7 @@ public class McqQuestionServiceimpl implements McqQuestionService {
 
     @Override
     public McqQuestionModel getQuestionById(int id) {
-        log.info("comes in service for fetch single questions");
+        log.info("Request received in service for fetch single questions");
         Optional<McqQuestionModel> question = questionRepositiory.findById(id);
         if (!question.isPresent()) {
             log.error("error occured");
@@ -71,43 +71,42 @@ public class McqQuestionServiceimpl implements McqQuestionService {
 
     @Override
     public void deleteQuestion(int id) {
-        log.info("comes in service for delete data");
+        log.info("Request received in service for delete data");
         Optional<McqQuestionModel> question = questionRepositiory.findById(id);
-        if (question.isPresent()) {
-            questionRepositiory.deleteById(id);
-            log.info("Delete data....");
-        } else {
+        if (question.isEmpty()) {
             log.error("throw Exception");
             throw new IdNotFound("Id Not Found");
         }
+        questionRepositiory.deleteById(id);
+        log.info("Delete data....");
     }
 
     @Override
     public McqQuestionModel updateQuestion(int id, McqQuestionModel mcqQuestionModel) {
-        log.info("comimg in service for update data");
+        log.info("Request received in service for update data");
         Optional<McqQuestionModel> question = questionRepositiory.findById(id);
-        if (question.isPresent()) {
-            McqQuestionModel questions = question.get();
-            questions.setSubCategory(mcqQuestionModel.getSubCategory());
-            questions.setQuestion(mcqQuestionModel.getQuestion());
-            questions.setOptionOne(mcqQuestionModel.getOptionOne());
-            questions.setOptionTwo(mcqQuestionModel.getOptionTwo());
-            questions.setOptionThree(mcqQuestionModel.getOptionThree());
-            questions.setOptionFour(mcqQuestionModel.getOptionFour());
-            questions.setCorrectOption(mcqQuestionModel.getCorrectOption());
-            questions.setPositiveMark(mcqQuestionModel.getPositiveMark());
-            questions.setNagativeMark(mcqQuestionModel.getNagativeMark());
-            McqQuestionModel updatedData = questionRepositiory.save(questions);
-            log.info("return updated data");
-            return updatedData;
-        } else {
+        if (question.isEmpty()) {
             log.error("Error occured");
             throw new IdNotFound("Id Is Not Present");
         }
+        McqQuestionModel questions = question.get();
+        questions.setSubCategory(mcqQuestionModel.getSubCategory());
+        questions.setQuestion(mcqQuestionModel.getQuestion());
+        questions.setOptionOne(mcqQuestionModel.getOptionOne());
+        questions.setOptionTwo(mcqQuestionModel.getOptionTwo());
+        questions.setOptionThree(mcqQuestionModel.getOptionThree());
+        questions.setOptionFour(mcqQuestionModel.getOptionFour());
+        questions.setCorrectOption(mcqQuestionModel.getCorrectOption());
+        questions.setPositiveMark(mcqQuestionModel.getPositiveMark());
+        questions.setNagativeMark(mcqQuestionModel.getNagativeMark());
+        McqQuestionModel updatedData = questionRepositiory.save(questions);
+        log.info("return updated data");
+        return updatedData;
     }
 
     @Override
     public List<McqQuestionModel> saveBulkQuestion(MultipartFile multipartFile) {
+        log.info("Request received in service for upload bulk questionns");
         List<McqQuestionModel> questionBank = new ArrayList<>();
         try (InputStream inputStream = multipartFile.getInputStream(); // USe Try With Resource
                 Workbook workbook = new XSSFWorkbook(inputStream)) {

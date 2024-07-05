@@ -27,32 +27,32 @@ public class CategoryController {
     private CategoryServiceImpl categoryServiceImpl;
     private static final Logger log = LoggerFactory.getLogger(CategoryController.class);
 
-    @PostMapping("/create")
+    @PostMapping()
     public ResponseEntity<SuccessResponse> createCategory(@RequestBody CategoryModel categoryModel) {
-        log.info("Request recieved for creating Category...");
+        log.info("Request received for creating Category...");
         CategoryModel createdCategory = categoryServiceImpl.saveCategory(categoryModel);
-        SuccessResponse response = new SuccessResponse("Category Store SuccesFully", HttpStatus.CREATED.value(),
+        SuccessResponse response = new SuccessResponse("Category Store successfully", HttpStatus.CREATED.value(),
                 createdCategory);
         log.info("Send Response Successfully");
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    @GetMapping("/all")
+    @GetMapping()
     public ResponseEntity<SuccessResponse> getAllCategory() {
-        log.info("Request for fetch all category");
+        log.info("Request for fetching all categories");
         List<CategoryModel> categoryModels = categoryServiceImpl.getAllCategory();
-        SuccessResponse response = new SuccessResponse("Data Fetch Succesfully", HttpStatus.OK.value(), categoryModels);
+        SuccessResponse response = new SuccessResponse("Data Fetch successfully", HttpStatus.OK.value(), categoryModels);
         log.info("Fetch All questions");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<SuccessResponse> getCategoryById(@PathVariable("id") int id) {
-        log.info("Request for single category fetch");
+        log.info("Request for fetching single category");
         CategoryModel categoryModel = categoryServiceImpl.getCategoryById(id);
         SuccessResponse response = new SuccessResponse("Data fetch by using id", HttpStatus.FOUND.value(),
                 categoryModel);
-        log.info("Question fetch succesfully");
+        log.info("Question fetch successfully");
         return new ResponseEntity<>(response, HttpStatus.FOUND);
     }
 
@@ -63,17 +63,15 @@ public class CategoryController {
         CategoryModel updatedCategoryModel = categoryServiceImpl.updateCategory(id, categoryModel);
         SuccessResponse response = new SuccessResponse("Data Updated...", HttpStatus.CREATED.value(),
                 updatedCategoryModel);
-        log.info("Update Data Succesfully");
+        log.info("Update Data successfully");
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteCategory(@PathVariable("id") int id) {
-        log.info("Request for delete data");
+        log.info("Request for deleting data");
         categoryServiceImpl.deleteCategory(id);
         return ResponseEntity.ok("Data Deleted....");
     }
-     
-   
 
 }

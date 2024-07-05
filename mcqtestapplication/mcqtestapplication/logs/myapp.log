@@ -85,3 +85,69 @@
 2024-07-04 12:32:33 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-07-04 12:32:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-07-04 12:32:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-07-04 17:11:46 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Starting McqtestapplicationApplicationTests using Java 21.0.3 with PID 16676 (started by vishal.yadav in D:\TestManagement_Application\mcqtestapplication\mcqtestapplication)
+2024-07-04 17:11:46 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-07-04 17:11:47 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-04 17:11:47 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+2024-07-04 17:11:48 [Test worker] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-04 17:11:48 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-04 17:11:48 [Test worker] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-07-04 17:11:49 [Test worker] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-04 17:11:49 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-04 17:11:49 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50672905
+2024-07-04 17:11:49 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-04 17:11:51 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-04 17:11:51 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-04 17:11:52 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-04 17:11:52 [Test worker] INFO  c.e.m.McqtestapplicationApplicationTests - Started McqtestapplicationApplicationTests in 6.606 seconds (process running for 8.384)
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.controller.CategoryController - Request for updating category
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.controller.CategoryController - Update Data Succesfully
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.controller.CategoryController - Request for fetch all category
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.controller.CategoryController - Fetch All questions
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.controller.CategoryController - Request recieved for creating Category...
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.controller.CategoryController - Send Response Successfully
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.controller.CategoryController - Request for delete data
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.controller.CategoryController - Request for single category fetch
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.controller.CategoryController - Question fetch succesfully
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for updating question
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.c.McqQuestionController - Update Data Succesfully
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.c.McqQuestionController - Request recieved for creating...
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.c.McqQuestionController - Send Response Successfully
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for delete data
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for fetch all questions
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.c.McqQuestionController - Fetch All questions
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.c.McqQuestionController - Request for single question fetch
+2024-07-04 17:11:53 [Test worker] INFO  c.e.m.c.McqQuestionController - Question fetch succesfully
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.c.SubCategoryController - Request for updating Subcategory
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.c.SubCategoryController - Update Data Succesfully
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.c.SubCategoryController - Request coming in controller for save dataAnnotation in spring
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.c.SubCategoryController - Request for delete data
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.c.SubCategoryController - Request for single Subcategory fetch
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.c.SubCategoryController - Question fetch succesfully
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.c.SubCategoryController - Request for fetch all Subcategory
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.c.SubCategoryController - Fetch All questions
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.CategoryServiceImpl - comimg in service for update data
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.CategoryServiceImpl - return updated data
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.CategoryServiceImpl - coming in service for get all questions
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.CategoryServiceImpl - return succesfully
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.CategoryServiceImpl - comes in serviceCollection
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.CategoryServiceImpl - return from service
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.CategoryServiceImpl - comes in service for delete data
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.CategoryServiceImpl - Delete data....
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comes in service
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return from service
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - coming in service for get all questions
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return succesfully
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - comimg in service for update data
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.McqQuestionServiceimpl - return updated data
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.SubCategoryServiceImpl - Request comimg in service for update data
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.SubCategoryServiceImpl - return updated data
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.SubCategoryServiceImpl -  Request comes in service for delete data
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.SubCategoryServiceImpl - Delete data....
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in sarvices for save subcategoryModel
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.SubCategoryServiceImpl - Data Save And Return Response
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.SubCategoryServiceImpl - Request coming in service for get all subcategory
+2024-07-04 17:11:54 [Test worker] INFO  c.e.m.service.SubCategoryServiceImpl - return succesfully
+2024-07-04 17:11:54 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-04 17:11:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-07-04 17:11:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
