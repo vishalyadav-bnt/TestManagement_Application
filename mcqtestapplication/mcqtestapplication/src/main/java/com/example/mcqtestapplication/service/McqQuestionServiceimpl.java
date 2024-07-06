@@ -35,7 +35,8 @@ public class McqQuestionServiceimpl implements McqQuestionService {
     @Override
     public McqQuestionModel creaQuestionModel(McqQuestionModel mcqQuestionModel) {
         log.info("Request received in service for save question data");
-        if (mcqQuestionModel == null || mcqQuestionModel.getQuestion() == null) {
+        if (isMcqQuestionModelInvalid(mcqQuestionModel)) {
+            System.out.println(isMcqQuestionModelInvalid(mcqQuestionModel));
             log.error("Error Occured......");
             throw new QuestionModelIsEmpty("Question model is empty");
         }
@@ -170,4 +171,17 @@ public class McqQuestionServiceimpl implements McqQuestionService {
         }
         return questionBank;
     }
+
+    public static boolean isMcqQuestionModelInvalid(McqQuestionModel mcqQuestionModel) {
+        return mcqQuestionModel.getQuestion() == null || mcqQuestionModel.getQuestion().isEmpty() ||
+                mcqQuestionModel.getOptionOne() == null || mcqQuestionModel.getOptionOne().isEmpty() ||
+                mcqQuestionModel.getOptionTwo() == null || mcqQuestionModel.getOptionTwo().isEmpty() ||
+                mcqQuestionModel.getOptionThree() == null || mcqQuestionModel.getOptionThree().isEmpty() ||
+                mcqQuestionModel.getOptionFour() == null || mcqQuestionModel.getOptionFour().isEmpty() ||
+                mcqQuestionModel.getCorrectOption() == null || mcqQuestionModel.getCorrectOption().isEmpty() ||
+                mcqQuestionModel.getPositiveMark() <= 0 ||
+                mcqQuestionModel.getNagativeMark() <= 0 ||
+                mcqQuestionModel.getSubCategory() == null;
+    }
+
 }

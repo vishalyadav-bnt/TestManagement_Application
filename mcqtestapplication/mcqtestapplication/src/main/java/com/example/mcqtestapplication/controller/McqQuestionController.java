@@ -20,14 +20,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.example.mcqtestapplication.model.McqQuestionModel;
 import com.example.mcqtestapplication.response.SuccessResponse;
-import com.example.mcqtestapplication.service.McqQuestionServiceimpl;
+import com.example.mcqtestapplication.service.McqQuestionService;
 
 @RestController
 @RequestMapping("/api/questions")
 public class McqQuestionController {
     private static final Logger log = LoggerFactory.getLogger(McqQuestionController.class);
     @Autowired
-    McqQuestionServiceimpl questionService;
+    McqQuestionService questionService;
 
     @PostMapping()
     public ResponseEntity<SuccessResponse> createQuestion(@RequestBody McqQuestionModel question) {

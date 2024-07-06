@@ -18,13 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.mcqtestapplication.model.CategoryModel;
 import com.example.mcqtestapplication.response.SuccessResponse;
-import com.example.mcqtestapplication.service.CategoryServiceImpl;
+import com.example.mcqtestapplication.service.CategoryService;
 
 @RestController
 @RequestMapping("/api/category")
 public class CategoryController {
     @Autowired
-    private CategoryServiceImpl categoryServiceImpl;
+    private CategoryService categoryServiceImpl;
     private static final Logger log = LoggerFactory.getLogger(CategoryController.class);
 
     @PostMapping()
@@ -41,7 +41,8 @@ public class CategoryController {
     public ResponseEntity<SuccessResponse> getAllCategory() {
         log.info("Request for fetching all categories");
         List<CategoryModel> categoryModels = categoryServiceImpl.getAllCategory();
-        SuccessResponse response = new SuccessResponse("Data Fetch successfully", HttpStatus.OK.value(), categoryModels);
+        SuccessResponse response = new SuccessResponse("Data Fetch successfully", HttpStatus.OK.value(),
+                categoryModels);
         log.info("Fetch All questions");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

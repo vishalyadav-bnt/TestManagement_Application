@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.mcqtestapplication.model.SubCategoryModel;
 import com.example.mcqtestapplication.response.SuccessResponse;
-import com.example.mcqtestapplication.service.SubCategoryServiceImpl;
+import com.example.mcqtestapplication.service.SubCategoryservice;
 
 @RestController
 @RequestMapping("api/subcategory")
 public class SubCategoryController {
     @Autowired
-    private SubCategoryServiceImpl subCategoryServiceImpl;
+    private SubCategoryservice subCategoryServiceImpl;
     private static final Logger log = LoggerFactory.getLogger(SubCategoryController.class);
 
     @PostMapping()

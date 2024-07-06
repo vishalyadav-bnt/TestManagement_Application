@@ -78,7 +78,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public CategoryModel saveCategory(CategoryModel categoryModel) {
         log.info("Request received in service for save category data");
-        if (categoryModel == null || categoryModel.getCategoryDescription() == null|| categoryModel.getCategoryName()==null||categoryModel.getCategoryName().isEmpty()) {
+        if (isCategoryModelInvalid(categoryModel)) {
             log.error("Error Occured In Saving");
             throw new ObjectIsNull("Category model is empty");
         }
@@ -90,6 +90,13 @@ public class CategoryServiceImpl implements CategoryService {
         CategoryModel storeCategroyModel = categoryRepositiory.save(categoryModel);
         log.info("return from service");
         return storeCategroyModel;
+    }
+
+    public static boolean isCategoryModelInvalid(CategoryModel categoryModel) {
+        return categoryModel == null ||
+               categoryModel.getCategoryDescription() == null ||
+               categoryModel.getCategoryName() == null ||
+               categoryModel.getCategoryName().isEmpty();
     }
 
 }

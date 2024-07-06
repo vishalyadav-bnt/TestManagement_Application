@@ -24,8 +24,7 @@ public class SubCategoryServiceImpl implements SubCategoryservice {
   @Override
   public SubCategoryModel saveSubcategoryModel(SubCategoryModel subCategoryModel) {
     log.info("Request received in service for save subcategoryModel");
-    if (subCategoryModel == null || subCategoryModel.getSubCategoryName() == null
-        || subCategoryModel.getSubCategoryName().isEmpty()) {
+    if (isSubCategoryModelInvalid(subCategoryModel)) {
       log.error("Error Occured In Save");
       throw new ObjectIsNull("SubCategory Model IS Empty");
     }
@@ -91,4 +90,13 @@ public class SubCategoryServiceImpl implements SubCategoryservice {
     log.info("return updated data");
     return updatedData;
   }
+
+
+  public static boolean isSubCategoryModelInvalid(SubCategoryModel subCategoryModel) {
+    return subCategoryModel == null ||
+           subCategoryModel.getCategoryModel() == null ||
+           subCategoryModel.getSubCategoryName() == null ||
+           subCategoryModel.getSubCategoryName().isEmpty();
+}
+
 }
